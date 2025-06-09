@@ -1,7 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 export function FeaturesSection() {
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
   return (
     <section className="relative py-24 bg-black">
       {/* Background gradient effects matching Figma design */}
