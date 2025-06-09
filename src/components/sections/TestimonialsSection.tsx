@@ -63,7 +63,7 @@ export function TestimonialsSection() {
           {/* First Row */}
           <div className="grid grid-cols-2 gap-6">
             <Card
-              className={`${testimonials[0].bgColor} rounded-3xl p-8 h-[251px]`}
+              className={`${testimonials[0].bgColor} rounded-3xl p-8 h-[251px] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`}
             >
               <div className="space-y-2 mb-6">
                 <h3 className="text-green-500 text-2xl font-medium leading-6 tracking-[-0.48px]">
