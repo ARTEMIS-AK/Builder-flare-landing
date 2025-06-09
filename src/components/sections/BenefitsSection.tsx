@@ -49,7 +49,15 @@ export function BenefitsSection() {
           </Card>
 
           {/* AI-Driven Interview Practice */}
-          <Card className="bg-gray-900 rounded-3xl p-11 text-center border border-white/20">
+          <Card
+            className={`rounded-3xl p-11 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
+              hoveredCard === 1
+                ? "bg-green-600"
+                : "bg-gray-900 border border-white/20"
+            }`}
+            onMouseEnter={() => setHoveredCard(1)}
+            onMouseLeave={() => setHoveredCard(null)}
+          >
             <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-7">
               <Sparkles className="w-6 h-6 text-green-600" />
             </div>
