@@ -96,7 +96,15 @@ export function BenefitsSection() {
         {/* Bottom Row - Additional Features */}
         <div className="grid grid-cols-2 gap-10 max-w-[840px] mx-auto">
           {/* Affiliate-powered & updated catalog */}
-          <Card className="bg-gray-900 rounded-3xl p-11 text-center border border-white/20">
+          <Card
+            className={`rounded-3xl p-11 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
+              hoveredCard === 3
+                ? "bg-green-600"
+                : "bg-gray-900 border border-white/20"
+            }`}
+            onMouseEnter={() => setHoveredCard(3)}
+            onMouseLeave={() => setHoveredCard(null)}
+          >
             <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-7">
               <Shield className="w-6 h-6 text-green-600" />
             </div>
