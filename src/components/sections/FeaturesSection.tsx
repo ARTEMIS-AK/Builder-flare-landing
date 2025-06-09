@@ -120,7 +120,13 @@ export function FeaturesSection() {
           </Card>
 
           {/* Skill Tests Card - Dark background with provided SVG */}
-          <Card className="bg-gray-900 rounded-3xl p-8 h-[400px] relative">
+          <Card
+            className={`rounded-3xl p-8 h-[400px] relative transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
+              hoveredCard === 1 ? "bg-white" : "bg-gray-900"
+            }`}
+            onMouseEnter={() => setHoveredCard(1)}
+            onMouseLeave={() => setHoveredCard(null)}
+          >
             <div className="h-[220px] mb-8 flex items-center justify-center relative">
               {/* Using the provided SVG */}
               <svg
