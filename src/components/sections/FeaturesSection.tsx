@@ -88,44 +88,31 @@ export function FeaturesSection() {
             </div>
           </Card>
 
-          {/* Skill Tests Card - Dark background with upward line chart */}
+          {/* Skill Tests Card - Dark background with provided SVG */}
           <Card className="bg-gray-900 rounded-3xl p-8 h-[400px] relative">
             <div className="h-[220px] mb-8 flex items-center justify-center relative">
-              {/* Chart container with green border frame */}
-              <div className="w-full h-36 bg-gray-800/50 rounded-lg relative border-2 border-green-500">
-                {/* Upward trending line chart */}
-                <svg
-                  className="absolute inset-2 w-[calc(100%-1rem)] h-[calc(100%-1rem)]"
-                  viewBox="0 0 180 120"
-                >
-                  <path
-                    d="M10 100 L40 80 L70 60 L100 40 L130 30 L160 20"
-                    stroke="#84cc16"
-                    strokeWidth="3"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  {/* Fill area under the line */}
-                  <path
-                    d="M10 100 L40 80 L70 60 L100 40 L130 30 L160 20 L160 110 L10 110 Z"
-                    fill="url(#skillGradient)"
-                    fillOpacity="0.3"
-                  />
-                  <defs>
-                    <linearGradient
-                      id="skillGradient"
-                      x1="0%"
-                      y1="0%"
-                      x2="0%"
-                      y2="100%"
-                    >
-                      <stop offset="0%" stopColor="#84cc16" />
-                      <stop offset="100%" stopColor="transparent" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
+              {/* Using the provided SVG */}
+              <svg
+                width="200"
+                height="200"
+                viewBox="0 0 561 561"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-full h-full"
+              >
+                <path
+                  d="M20.2944 20.042V540.722H540.974"
+                  stroke="#28A263"
+                  strokeWidth="29.4891"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M140.454 260.354L240.584 360.485L400.794 120.171L540.977 220.302"
+                  stroke="#C0F497"
+                  strokeWidth="29.4891"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </div>
 
             <div className="space-y-3">
