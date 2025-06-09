@@ -82,7 +82,7 @@ export function PricingSection() {
     <section className="py-24 bg-black">
       <div className="max-w-[1440px] mx-auto px-[202px]">
         {/* Section Header */}
-        <div className="text-center mb-[169px]">
+        <div className="text-center mb-[149px]">
           <h2 className="text-white text-[55px] font-semibold leading-[150%] tracking-[-1.65px] mb-[10px]">
             Ready to Get Started?
           </h2>
@@ -92,34 +92,39 @@ export function PricingSection() {
         </div>
 
         {/* Toggle & Discount */}
-        <div className="flex justify-center items-center mb-[60px] relative">
-          <div className="flex items-center gap-[92px]">
-            <span className="text-white text-[20px] font-semibold leading-[150%] tracking-[-0.4px]">
+        <div className="relative w-[248px] h-[100px] mx-auto mb-[42px]">
+          {/* Toggle Group */}
+          <div className="relative w-[235px] h-[36px]">
+            <span className="absolute left-0 top-[3px] text-white text-[20px] font-semibold leading-[150%] tracking-[-0.4px] w-[76px] h-[30px]">
               Monthly
+            </span>
+
+            <span className="absolute left-[178px] top-[3px] text-white text-[20px] font-semibold leading-[150%] tracking-[-0.4px] w-[57px] h-[30px]">
+              Yearly
             </span>
 
             {/* Toggle Switch */}
             <div
-              className="relative cursor-pointer"
+              className="absolute left-[92px] top-0 w-[70px] h-[36px] cursor-pointer"
               onClick={() => setIsYearly(!isYearly)}
             >
-              <div className="w-[70px] h-[36px] bg-[#28A263] rounded-[30px] relative transition-all duration-300">
+              <div
+                className={`w-[70px] h-[36px] rounded-[30px] relative transition-all duration-300 ${
+                  isYearly ? "bg-[#28A263]" : "bg-gray-600"
+                }`}
+              >
                 <div
                   className={`absolute top-[4px] w-[28px] h-[28px] bg-white rounded-[28px] transition-all duration-300 ${
-                    isYearly ? "right-[4px]" : "left-[4px]"
+                    isYearly ? "left-[38px]" : "left-[4px]"
                   }`}
                 />
               </div>
             </div>
-
-            <span className="text-white text-[20px] font-semibold leading-[150%] tracking-[-0.4px]">
-              Yearly
-            </span>
           </div>
 
-          {/* Save 35% Badge with Arrow - positioned relative to toggle */}
+          {/* Discount */}
           {isYearly && (
-            <div className="absolute left-1/2 translate-x-[83px] top-[30px]">
+            <div className="absolute left-[83px] top-[30px] w-[165px] h-[70px]">
               {/* Curved Arrow */}
               <div className="absolute left-[92px] top-0 transform rotate-[153deg]">
                 <svg
