@@ -98,10 +98,22 @@ export function FeaturesSection() {
             </div>
 
             <div className="space-y-2">
-              <h3 className="text-gray-900 text-lg font-semibold line-clamp-1">
+              <h3
+                className={`text-xl font-semibold line-clamp-1 ${
+                  hoveredCard === null || hoveredCard === 0
+                    ? "text-gray-900"
+                    : "text-gray-200"
+                }`}
+              >
                 Track & Improve
               </h3>
-              <p className="text-gray-500 text-xs leading-relaxed line-clamp-2">
+              <p
+                className={`text-sm leading-relaxed line-clamp-2 ${
+                  hoveredCard === null || hoveredCard === 0
+                    ? "text-gray-500"
+                    : "text-gray-400"
+                }`}
+              >
                 Personalized dashboards to track progress and skill gaps.
               </p>
             </div>
