@@ -3,10 +3,18 @@ import { Button } from "@/components/ui/button";
 
 export function FeaturesSection() {
   return (
-    <section className="relative py-24 bg-gradient-to-b from-black via-green-900/20 to-black">
-      {/* Background gradient effects */}
+    <section className="relative py-24 bg-black">
+      {/* Background gradient effects matching Figma design */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-full h-full bg-gradient-to-b from-transparent via-green-500/10 to-transparent"></div>
+        {/* Main center blur */}
+        <div className="absolute w-[956px] h-[476px] bg-[#C0F497]/40 rounded-full blur-[150px] transform rotate-[-6.48deg] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+
+        {/* Right side gradient path */}
+        <div className="absolute right-0 top-20 w-[600px] h-[700px] bg-gradient-to-br from-[#2F2F2F] to-[#696969] opacity-30 rounded-full blur-[125px] transform rotate-12"></div>
+
+        {/* Left side blurs */}
+        <div className="absolute left-0 bottom-32 w-[600px] h-[464px] bg-[#C0F497]/30 rounded-full blur-[150px]"></div>
+        <div className="absolute left-20 bottom-20 w-[450px] h-[337px] bg-[#2DDB81]/40 rounded-full blur-[100px]"></div>
       </div>
 
       <div className="relative max-w-[1440px] mx-auto px-4 md:px-8 lg:px-20">
