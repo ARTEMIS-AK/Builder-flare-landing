@@ -38,7 +38,7 @@ export function CaseStudiesSection() {
         "Reduced job search time from 3 months to 4 weeks by identifying skill gaps and following a guided growth plan.",
       highlight: "3 months to 4 weeks",
       bgImage:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       fullStory: {
         name: "Rajesh Kumar",
         background:
