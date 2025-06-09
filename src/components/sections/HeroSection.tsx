@@ -14,7 +14,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="relative max-w-[1440px] mx-auto px-20 pt-32">
+      <div className="relative max-w-[1440px] mx-auto px-4 md:px-8 lg:px-20 pt-16 md:pt-24 lg:pt-32">
         {/* Rating Section */}
         <div className="flex items-center gap-2 mb-6">
           <div className="flex gap-1">
