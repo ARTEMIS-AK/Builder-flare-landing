@@ -1,76 +1,86 @@
 import { Card } from "@/components/ui/card";
-import { CheckCircle, BarChart3, Mic, BookOpen } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sparkles, GraduationCap } from "lucide-react";
 
 export function FeaturesSection() {
   return (
-    <section className="relative py-24 bg-black">
-      {/* Background blur effects */}
+    <section className="relative py-24 bg-gradient-to-b from-black via-green-900/20 to-black">
+      {/* Background gradient effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-[956px] h-[527px] bg-green-600/40 rounded-full blur-[150px] transform rotate-[-6.481deg] left-[148px] top-[198px]"></div>
+        <div className="absolute w-full h-full bg-gradient-to-b from-transparent via-green-500/10 to-transparent"></div>
       </div>
 
-      <div className="relative max-w-[1440px] mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-white text-6xl font-semibold leading-tight mb-6">
+      <div className="relative max-w-[1440px] mx-auto px-4 md:px-8 lg:px-20">
+        {/* Header with title and button */}
+        <div className="flex items-center justify-between mb-16">
+          <h2 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-2xl">
             Your smart learning journey starts here
             <span className="text-black">.</span>
           </h2>
+
+          <Button
+            variant="outline"
+            className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full text-lg hidden lg:flex"
+          >
+            Get Started Now
+          </Button>
         </div>
 
         {/* Features Grid */}
-        <div className="flex justify-center gap-6 mb-24">
-          {/* Track & Improve Card */}
-          <Card className="w-[302px] h-[383px] bg-white rounded-3xl p-8 relative overflow-hidden">
-            <div className="h-[228px] mb-8 relative">
-              {/* Chart Background */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Track & Improve Card - White background */}
+          <Card className="bg-white rounded-3xl p-8 h-[400px] relative overflow-hidden">
+            <div className="h-[240px] mb-6 relative">
+              {/* Chart Background with grid */}
               <div className="absolute inset-0">
-                {/* Grid lines */}
-                {[0, 38, 75, 112, 148, 186, 222].map((top, i) => (
-                  <div
-                    key={i}
-                    className="absolute w-full h-px bg-gray-900/5"
-                    style={{ top: `${top}px` }}
-                  />
-                ))}
+                {/* Horizontal grid lines */}
+                <div className="absolute w-full h-px bg-gray-200 top-0"></div>
+                <div className="absolute w-full h-px bg-gray-200 top-12"></div>
+                <div className="absolute w-full h-px bg-gray-200 top-24"></div>
+                <div className="absolute w-full h-px bg-gray-200 top-36"></div>
+                <div className="absolute w-full h-px bg-gray-200 top-48"></div>
+                <div className="absolute w-full h-px bg-gray-200 bottom-0"></div>
 
                 {/* Y-axis labels */}
-                <div className="absolute left-0 top-[70px] text-right text-[10px] text-gray-900/70 w-[13px]">
-                  <div className="absolute top-0">80</div>
-                  <div className="absolute top-[37px]">60</div>
-                  <div className="absolute top-[73px]">40</div>
-                  <div className="absolute top-[110px]">20</div>
-                  <div className="absolute top-[146px]">0</div>
+                <div className="absolute left-0 top-0 text-xs text-gray-500 -translate-y-1">
+                  80
+                </div>
+                <div className="absolute left-0 top-12 text-xs text-gray-500 -translate-y-1">
+                  60
+                </div>
+                <div className="absolute left-0 top-24 text-xs text-gray-500 -translate-y-1">
+                  40
+                </div>
+                <div className="absolute left-0 top-36 text-xs text-gray-500 -translate-y-1">
+                  20
+                </div>
+                <div className="absolute left-0 bottom-0 text-xs text-gray-500 translate-y-1">
+                  0
                 </div>
 
-                {/* Chart Line */}
+                {/* Line Chart */}
                 <svg
-                  className="absolute left-[22px] top-[88px] w-[355px] h-[110px]"
-                  viewBox="0 0 355 110"
+                  className="absolute inset-0 w-full h-full"
+                  viewBox="0 0 300 200"
                 >
                   <path
-                    d="M5 37L9 43C13 49 22 61 30 70C39 78 47 84 56 72C64 61 72 31 81 31C89 32 98 61 106 70C115 78 123 66 132 72C140 78 149 102 157 93C165 84 174 43 182 46C191 49 199 70 208 93C216 117 224 117 233 102C243 88 247 83 258 75C268 68 275 78 284 67C292 55 301 20 309 14C317 8 326 31 334 34C343 37 351 20 355 11L359 2"
-                    stroke="#28A263"
-                    strokeWidth="2.86"
-                    strokeLinecap="round"
+                    d="M20 60 L60 40 L100 80 L140 30 L180 100 L220 50 L260 20"
+                    stroke="#22c55e"
+                    strokeWidth="3"
                     fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
+                  {/* Data points */}
+                  <circle cx="60" cy="40" r="4" fill="#22c55e" />
+                  <circle cx="140" cy="30" r="4" fill="#22c55e" />
+                  <circle cx="220" cy="50" r="4" fill="#22c55e" />
                 </svg>
-
-                {/* Data points */}
-                <div className="absolute">
-                  <div className="absolute w-[10px] h-[10px] bg-gray-900 rounded-full border-2 border-green-600 left-[93px] top-[93px]"></div>
-                  <div className="absolute w-[10px] h-[10px] bg-gray-900 rounded-full border-2 border-green-600 left-[110px] top-[38px]"></div>
-                  <div className="absolute w-[10px] h-[10px] bg-gray-900 rounded-full border-2 border-green-600 left-[57px] top-[64px]"></div>
-                </div>
-
-                {/* Progress bar */}
-                <div className="absolute w-[117px] h-px bg-green-600 left-[261px] top-[104px]"></div>
               </div>
             </div>
 
-            <div className="space-y-2">
-              <h3 className="text-gray-900 text-lg font-medium">
+            <div className="space-y-3">
+              <h3 className="text-gray-900 text-xl font-semibold">
                 Track & Improve
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
@@ -79,17 +89,83 @@ export function FeaturesSection() {
             </div>
           </Card>
 
-          {/* Skill Tests Card */}
-          <Card className="w-[302px] h-[383px] bg-gray-900 rounded-3xl p-8 relative">
-            <div className="h-[213px] mb-8 flex items-center justify-center">
-              <BarChart3
-                className="w-[213px] h-[213px] text-green-400"
-                strokeWidth={1}
-              />
+          {/* Skill Tests Card - Dark background */}
+          <Card className="bg-gray-900 rounded-3xl p-8 h-[400px] relative">
+            <div className="h-[240px] mb-6 flex items-center justify-center relative">
+              {/* Line chart visualization */}
+              <svg className="w-full h-full" viewBox="0 0 200 120">
+                <defs>
+                  <linearGradient
+                    id="lineGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop offset="0%" stopColor="#22c55e" />
+                    <stop offset="100%" stopColor="#84cc16" />
+                  </linearGradient>
+                </defs>
+                {/* Grid lines */}
+                <line
+                  x1="0"
+                  y1="20"
+                  x2="200"
+                  y2="20"
+                  stroke="#374151"
+                  strokeWidth="1"
+                  opacity="0.3"
+                />
+                <line
+                  x1="0"
+                  y1="40"
+                  x2="200"
+                  y2="40"
+                  stroke="#374151"
+                  strokeWidth="1"
+                  opacity="0.3"
+                />
+                <line
+                  x1="0"
+                  y1="60"
+                  x2="200"
+                  y2="60"
+                  stroke="#374151"
+                  strokeWidth="1"
+                  opacity="0.3"
+                />
+                <line
+                  x1="0"
+                  y1="80"
+                  x2="200"
+                  y2="80"
+                  stroke="#374151"
+                  strokeWidth="1"
+                  opacity="0.3"
+                />
+                <line
+                  x1="0"
+                  y1="100"
+                  x2="200"
+                  y2="100"
+                  stroke="#374151"
+                  strokeWidth="1"
+                  opacity="0.3"
+                />
+
+                {/* Line chart */}
+                <path
+                  d="M20 90 L50 60 L80 40 L120 70 L160 30 L190 50"
+                  stroke="url(#lineGradient)"
+                  strokeWidth="3"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+              </svg>
             </div>
 
-            <div className="space-y-2 text-center">
-              <h3 className="text-gray-200 text-lg font-medium">
+            <div className="space-y-3">
+              <h3 className="text-gray-200 text-xl font-semibold">
                 Skill Tests that Matter
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed">
@@ -99,17 +175,28 @@ export function FeaturesSection() {
             </div>
           </Card>
 
-          {/* AI Interview Prep Card */}
-          <Card className="w-[302px] h-[383px] bg-gray-900 rounded-3xl p-8 relative">
-            <div className="h-[213px] mb-8 flex items-center justify-center">
-              <Mic
-                className="w-[184px] h-[184px] text-green-500"
-                strokeWidth={1}
-              />
+          {/* AI Interview Prep Card - Dark background */}
+          <Card className="bg-gray-900 rounded-3xl p-8 h-[400px] relative">
+            <div className="h-[240px] mb-6 flex items-center justify-center relative">
+              {/* Bar chart with sparkle */}
+              <div className="relative w-full h-full flex items-end justify-center gap-3">
+                {/* Bar chart bars */}
+                <div className="w-6 h-20 bg-green-500 rounded-t"></div>
+                <div className="w-6 h-32 bg-green-400 rounded-t"></div>
+                <div className="w-6 h-16 bg-green-500 rounded-t"></div>
+                <div className="w-6 h-28 bg-green-400 rounded-t"></div>
+                <div className="w-6 h-12 bg-green-500 rounded-t"></div>
+                <div className="w-6 h-24 bg-green-400 rounded-t"></div>
+
+                {/* Sparkle/Star icon */}
+                <div className="absolute top-0 right-0">
+                  <Sparkles className="w-12 h-12 text-green-400" />
+                </div>
+              </div>
             </div>
 
-            <div className="space-y-2 text-center">
-              <h3 className="text-gray-200 text-lg font-medium">
+            <div className="space-y-3">
+              <h3 className="text-gray-200 text-xl font-semibold">
                 AI-Powered Interview Prep
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed">
@@ -118,17 +205,22 @@ export function FeaturesSection() {
             </div>
           </Card>
 
-          {/* Learn from the Best Card */}
-          <Card className="w-[302px] h-[383px] bg-gray-900 rounded-3xl p-8 relative">
-            <div className="h-[213px] mb-8 flex items-center justify-center">
-              <BookOpen
-                className="w-[184px] h-[184px] text-green-400"
-                strokeWidth={1}
-              />
+          {/* Learn from the Best Card - Dark background */}
+          <Card className="bg-gray-900 rounded-3xl p-8 h-[400px] relative">
+            <div className="h-[240px] mb-6 flex items-center justify-center">
+              {/* Graduation cap icon with modern design */}
+              <div className="relative">
+                <div className="w-32 h-32 rounded-3xl border-4 border-green-400 bg-transparent flex items-center justify-center">
+                  <GraduationCap className="w-16 h-16 text-green-400 stroke-2" />
+                </div>
+                {/* Decorative elements */}
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-400 rounded-full"></div>
+                <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-green-500 rounded-full"></div>
+              </div>
             </div>
 
-            <div className="space-y-2 text-center">
-              <h3 className="text-gray-200 text-lg font-medium">
+            <div className="space-y-3">
+              <h3 className="text-gray-200 text-xl font-semibold">
                 Learn from the Best
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed">
