@@ -12,7 +12,7 @@ export function CaseStudiesSection() {
         "Placement call-back rate jumped from 8% to 30% after using AI-driven interview feedback for 2 weeks.",
       highlight: "8% to 30%",
       bgImage:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2376&q=80",
+        "https://images.unsplash.com/photo-1607013251379-e6eecfffe234?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       fullStory: {
         name: "Priya Sharma",
         background:
