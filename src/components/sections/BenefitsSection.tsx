@@ -27,7 +27,15 @@ export function BenefitsSection() {
         {/* Top Row - Main Features */}
         <div className="grid grid-cols-3 gap-10 mb-16">
           {/* Smart Skill Assessments */}
-          <Card className="bg-green-600 rounded-3xl p-11 text-center">
+          <Card
+            className={`rounded-3xl p-11 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
+              hoveredCard === null || hoveredCard === 0
+                ? "bg-green-600"
+                : "bg-gray-900 border border-white/20"
+            }`}
+            onMouseEnter={() => setHoveredCard(0)}
+            onMouseLeave={() => setHoveredCard(null)}
+          >
             <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-7">
               <Edit3 className="w-6 h-6 text-green-600" />
             </div>
