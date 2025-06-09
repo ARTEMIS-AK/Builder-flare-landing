@@ -227,7 +227,13 @@ export function FeaturesSection() {
           </Card>
 
           {/* Learn from the Best Card - Dark background with course SVG */}
-          <Card className="bg-gray-900 rounded-3xl p-8 h-[400px] relative">
+          <Card
+            className={`rounded-3xl p-8 h-[400px] relative transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
+              hoveredCard === 3 ? "bg-white" : "bg-gray-900"
+            }`}
+            onMouseEnter={() => setHoveredCard(3)}
+            onMouseLeave={() => setHoveredCard(null)}
+          >
             <div className="h-[220px] mb-8 flex items-center justify-center">
               {/* Course SVG */}
               <svg
