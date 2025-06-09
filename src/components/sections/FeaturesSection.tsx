@@ -39,7 +39,15 @@ export function FeaturesSection() {
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Track & Improve Card - White background */}
-          <Card className="bg-white rounded-3xl p-8 h-[400px] relative overflow-hidden">
+          <Card
+            className={`rounded-3xl p-8 h-[400px] relative overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
+              hoveredCard === null || hoveredCard === 0
+                ? "bg-white"
+                : "bg-gray-900"
+            }`}
+            onMouseEnter={() => setHoveredCard(0)}
+            onMouseLeave={() => setHoveredCard(null)}
+          >
             <div className="h-[220px] mb-8 relative">
               {/* Y-axis labels */}
               <div className="absolute left-0 top-2 text-xs text-gray-400 font-medium">
