@@ -61,16 +61,6 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Call-to-Action Button positioned on the right */}
-        <div className="absolute top-[328px] right-[75px]">
-          <Button
-            variant="outline"
-            className="border-2 border-white text-white hover:bg-white hover:text-black px-6 py-3 rounded-full"
-          >
-            Get Started Now
-          </Button>
-        </div>
-
         {/* Decorative Elements */}
         <div className="absolute top-[659px] left-[88px] flex items-center gap-8">
           <div className="flex gap-4">
