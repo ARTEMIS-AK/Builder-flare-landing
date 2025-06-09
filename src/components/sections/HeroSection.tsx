@@ -45,7 +45,7 @@ export function HeroSection() {
             course suggestions — all in one place.
           </p>
 
-          <div className="flex items-center gap-8">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
             <Button className="bg-green-600 hover:bg-green-700 text-white px-6 py-4 h-14 text-lg font-semibold">
               Get a Free Demo
             </Button>
