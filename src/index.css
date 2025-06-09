@@ -76,8 +76,10 @@
     @apply dark;
   }
 
-  body {
-    @apply bg-black text-white font-sans antialiased;
+  /* Global font family - applied to everything */
+  *,
+  *::before,
+  *::after {
     font-family:
       "Outfit",
       -apple-system,
@@ -90,7 +92,24 @@
       "Fira Sans",
       "Droid Sans",
       "Helvetica Neue",
-      sans-serif;
+      sans-serif !important;
+  }
+
+  body {
+    @apply bg-black text-white antialiased;
+    font-family:
+      "Outfit",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      "Roboto",
+      "Oxygen",
+      "Ubuntu",
+      "Cantarell",
+      "Fira Sans",
+      "Droid Sans",
+      "Helvetica Neue",
+      sans-serif !important;
   }
 
   h1,
@@ -105,24 +124,25 @@
       BlinkMacSystemFont,
       "Segoe UI",
       "Roboto",
-      sans-serif;
+      sans-serif !important;
+    font-weight: 600;
   }
 
-  /* Apply Outfit to all text elements */
   p,
   span,
   div,
   button,
   input,
   textarea,
-  label {
+  label,
+  a {
     font-family:
       "Outfit",
       -apple-system,
       BlinkMacSystemFont,
       "Segoe UI",
       "Roboto",
-      sans-serif;
+      sans-serif !important;
   }
 }
 
@@ -146,5 +166,29 @@
   .blur-green {
     filter: blur(150px);
     background: rgba(192, 244, 151, 0.4);
+  }
+
+  /* Ensure Outfit font for all components */
+  .font-outfit {
+    font-family:
+      "Outfit",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      "Roboto",
+      sans-serif !important;
+  }
+}
+
+/* Override any existing font families with Outfit */
+@layer utilities {
+  .font-sans {
+    font-family:
+      "Outfit",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      "Roboto",
+      sans-serif !important;
   }
 }
