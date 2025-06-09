@@ -209,10 +209,18 @@ export function FeaturesSection() {
             </div>
 
             <div className="space-y-2">
-              <h3 className="text-gray-200 text-lg font-semibold line-clamp-1">
+              <h3
+                className={`text-xl font-semibold line-clamp-1 ${
+                  hoveredCard === 2 ? "text-gray-900" : "text-gray-200"
+                }`}
+              >
                 AI-Powered Interview Prep
               </h3>
-              <p className="text-gray-400 text-xs leading-relaxed line-clamp-2">
+              <p
+                className={`text-sm leading-relaxed line-clamp-2 ${
+                  hoveredCard === 2 ? "text-gray-500" : "text-gray-400"
+                }`}
+              >
                 Practice with real-time simulations and intelligent feedback.
               </p>
             </div>
