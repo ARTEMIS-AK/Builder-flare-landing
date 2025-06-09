@@ -165,11 +165,11 @@ export function FeaturesSection() {
               </svg>
             </div>
 
-            <div className="space-y-3">
-              <h3 className="text-gray-200 text-xl font-semibold">
+            <div className="space-y-2">
+              <h3 className="text-gray-200 text-lg font-semibold line-clamp-1">
                 AI-Powered Interview Prep
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-400 text-xs leading-relaxed line-clamp-2">
                 Practice with real-time simulations and intelligent feedback.
               </p>
             </div>
