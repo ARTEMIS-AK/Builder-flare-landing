@@ -33,7 +33,7 @@ export function HeroSection() {
 
         {/* Main Heading */}
         <div className="max-w-[916px] mb-8">
-          <h1 className="text-[72px] font-bold leading-[80px] tracking-[-2.16px] mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-[72px] font-bold leading-tight lg:leading-[80px] tracking-[-2.16px] mb-6">
             <span className="text-white">Supercharge your skills</span>
             <span className="text-green-500">.</span>
             <br />
