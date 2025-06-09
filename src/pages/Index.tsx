@@ -1,43 +1,29 @@
-const Index = () => {
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { FeaturesSection } from "@/components/sections/FeaturesSection";
+import { BenefitsSection } from "@/components/sections/BenefitsSection";
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+import { CaseStudiesSection } from "@/components/sections/CaseStudiesSection";
+import { PricingSection } from "@/components/sections/PricingSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { NewsletterSection } from "@/components/sections/NewsletterSection";
+
+export default function Index() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
-      <div className="text-center">
-        {/* TODO: replace everything here with the actual app! */}
-        <h1 className="text-2xl font-semibold text-slate-800 flex items-center justify-center gap-3">
-          <svg
-            className="animate-spin h-8 w-8 text-slate-400"
-            viewBox="0 0 50 50"
-          >
-            <circle
-              className="opacity-30"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-            />
-            <circle
-              className="text-slate-600"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-              strokeDasharray="100"
-              strokeDashoffset="75"
-            />
-          </svg>
-          Generating your app...
-        </h1>
-        <p className="mt-4 text-slate-600 max-w-md">
-          Watch the chat on the left for updates that might need your attention
-          to finish generating
-        </p>
-      </div>
+    <div className="min-h-screen bg-black">
+      <Header />
+      <main>
+        <HeroSection />
+        <FeaturesSection />
+        <BenefitsSection />
+        <TestimonialsSection />
+        <CaseStudiesSection />
+        <PricingSection />
+        <FAQSection />
+        <NewsletterSection />
+      </main>
+      <Footer />
     </div>
   );
-};
-
-export default Index;
+}
