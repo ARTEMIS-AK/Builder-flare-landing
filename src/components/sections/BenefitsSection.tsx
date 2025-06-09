@@ -1,7 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { Edit3, Sparkles, TrendingUp, Shield, Clock } from "lucide-react";
+import { useState } from "react";
 
 export function BenefitsSection() {
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
   return (
     <section className="relative py-24 bg-black">
       {/* Background blur effects */}
