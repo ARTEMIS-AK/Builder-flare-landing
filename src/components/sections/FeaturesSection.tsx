@@ -86,11 +86,11 @@ export function FeaturesSection() {
               </div>
             </div>
 
-            <div className="space-y-3">
-              <h3 className="text-gray-900 text-xl font-semibold">
+            <div className="space-y-2">
+              <h3 className="text-gray-900 text-lg font-semibold line-clamp-1">
                 Track & Improve
               </h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
+              <p className="text-gray-500 text-xs leading-relaxed line-clamp-2">
                 Personalized dashboards to track progress and skill gaps.
               </p>
             </div>
