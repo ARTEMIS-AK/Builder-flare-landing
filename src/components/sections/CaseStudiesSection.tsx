@@ -65,7 +65,7 @@ export function CaseStudiesSection() {
         "Interview success rate increased from 1 out of 6 to 4 out of 6 after completing 5 AI mock sessions and 2 targeted assessments.",
       highlight: "1 out of 6 to 4 out of 6",
       bgImage:
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2371&q=80",
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       fullStory: {
         name: "Arjun Patel",
         background:
