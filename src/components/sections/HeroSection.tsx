@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
+import Spline from "@splinetool/react-spline";
 
 export function HeroSection() {
   return (
@@ -15,54 +16,72 @@ export function HeroSection() {
       </div>
 
       <div className="relative max-w-[1440px] mx-auto px-4 md:px-8 lg:px-20 pt-16 md:pt-24 lg:pt-32">
-        {/* Rating Section */}
-        <div className="flex items-center gap-2 mb-6">
-          <div className="flex gap-1">
-            {[...Array(4)].map((_, i) => (
-              <Star
-                key={i}
-                className="w-6 h-6 fill-yellow-400 text-yellow-400"
-              />
-            ))}
-            <Star className="w-6 h-6 fill-gray-400 text-gray-400" />
-          </div>
-          <span className="text-gray-400 text-sm">
-            Based on <span className="text-gray-300">1000+</span> reviews
-          </span>
-        </div>
-
-        {/* Main Heading */}
-        <div className="max-w-[916px] mb-8">
-          <h1 className="text-4xl md:text-5xl lg:text-[72px] font-bold leading-tight lg:leading-[80px] tracking-[-2.16px] mb-6">
-            <span className="text-white">Supercharge your skills</span>
-            <span className="text-green-500">.</span>
-            <br />
-            <span className="text-white">Get career-ready with AI</span>
-          </h1>
-
-          <p className="text-white text-lg leading-6 max-w-[510px] mb-12">
-            AI-powered learning paths, smart skill tests, and personalized
-            course suggestions — all in one place.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
-            <Button className="bg-green-600 hover:bg-green-700 text-white px-6 py-4 h-14 text-lg font-semibold">
-              Get a Free Demo
-            </Button>
-
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[80vh]">
+          {/* Left Side - Content */}
+          <div className="space-y-6">
+            {/* Rating Section */}
             <div className="flex items-center gap-2">
-              <div className="w-px h-6 bg-green-500"></div>
-              <div className="text-green-500 text-xs leading-4 max-w-[273px]">
-                Take a free skill assessment
+              <div className="flex gap-1">
+                {[...Array(4)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="w-6 h-6 fill-yellow-400 text-yellow-400"
+                  />
+                ))}
+                <Star className="w-6 h-6 fill-gray-400 text-gray-400" />
+              </div>
+              <span className="text-gray-400 text-sm">
+                Based on <span className="text-gray-300">1000+</span> reviews
+              </span>
+            </div>
+
+            {/* Main Heading */}
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-5xl lg:text-[72px] font-bold leading-tight lg:leading-[80px] tracking-[-2.16px]">
+                <span className="text-white">Supercharge your skills</span>
+                <span className="text-green-500">.</span>
                 <br />
-                Discover where you stand in just a few minutes.
+                <span className="text-white">Get career-ready with AI</span>
+              </h1>
+
+              <p className="text-white text-lg leading-6 max-w-[510px]">
+                AI-powered learning paths, smart skill tests, and personalized
+                course suggestions — all in one place.
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
+                <Button className="bg-green-600 hover:bg-green-700 text-white px-6 py-4 h-14 text-lg font-semibold">
+                  Get a Free Demo
+                </Button>
+
+                <div className="flex items-center gap-2">
+                  <div className="w-px h-6 bg-green-500"></div>
+                  <div className="text-green-500 text-xs leading-4 max-w-[273px]">
+                    Take a free skill assessment
+                    <br />
+                    Discover where you stand in just a few minutes.
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+
+          {/* Right Side - 3D Model */}
+          <div className="relative h-[600px] lg:h-[700px] w-full">
+            <div className="absolute inset-0 rounded-lg overflow-hidden">
+              <Spline
+                scene="https://prod.spline.design/IGcAq7gylHWdmxIv/scene.splinecode"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Optional: Add a subtle overlay to blend with the design */}
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/10 pointer-events-none"></div>
           </div>
         </div>
 
         {/* Decorative Elements */}
-        <div className="absolute top-[659px] left-[88px] flex items-center gap-8">
+        <div className="absolute bottom-20 left-20 lg:left-[88px] flex items-center gap-8">
           <div className="flex gap-4">
             <div className="w-3 h-3 bg-white rounded-full"></div>
             <div className="w-3 h-3 bg-white rounded-full"></div>
