@@ -15,10 +15,10 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="relative max-w-[1440px] mx-auto px-4 md:px-8 lg:px-20 pt-16 md:pt-24 lg:pt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[80vh]">
-          {/* Left Side - Content */}
-          <div className="space-y-6">
+      <div className="relative max-w-[1440px] mx-auto px-4 md:px-8 lg:px-20 pt-8 md:pt-12 lg:pt-16">
+        <div className="flex items-center min-h-[85vh]">
+          {/* Left Side - Content (More space) */}
+          <div className="w-full lg:w-[60%] space-y-6 lg:pr-8">
             {/* Rating Section */}
             <div className="flex items-center gap-2">
               <div className="flex gap-1">
@@ -37,7 +37,7 @@ export function HeroSection() {
 
             {/* Main Heading */}
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-[72px] font-bold leading-tight lg:leading-[80px] tracking-[-2.16px]">
+              <h1 className="text-4xl md:text-5xl lg:text-[72px] font-bold leading-tight lg:leading-[80px] tracking-[-2.16px] max-w-[916px]">
                 <span className="text-white">Supercharge your skills</span>
                 <span className="text-green-500">.</span>
                 <br />
@@ -66,16 +66,16 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Side - 3D Model */}
-          <div className="relative h-[600px] lg:h-[700px] w-full">
-            <div className="absolute inset-0 rounded-lg overflow-hidden">
+          {/* Right Side - 3D Model (Smaller and positioned right) */}
+          <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[35%] h-[500px] mr-8">
+            <div className="relative w-full h-full rounded-lg overflow-hidden">
               <Spline
                 scene="https://prod.spline.design/IGcAq7gylHWdmxIv/scene.splinecode"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover spline-container"
               />
             </div>
 
-            {/* Optional: Add a subtle overlay to blend with the design */}
+            {/* Subtle overlay to blend with design */}
             <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/10 pointer-events-none"></div>
           </div>
         </div>
